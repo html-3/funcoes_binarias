@@ -1,4 +1,5 @@
 #funcao transforma um número decimal inteiro para binário
+# nao está em uso
 
 def decimal_inteiro_binario(n):
     b=2

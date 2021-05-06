@@ -14,20 +14,20 @@ p=["Sair",
 e=-1
 
 while True:
-    head("       \033[032mOperacoes de Mudanca de Base\033[m",s)
+    head("Operacoes de Mudanca de Base",s)
     e=opcoes(p)
     
     if e==0:
-        print(" \033[032mSaindo...\033[m","\n")
+        print("Saindo...","\n")
         break
     elif e==1:
-        n=intread(" \033[032mInsira um valor:\033[m ")
-        print(f"\n  R:\033[035m{dec2bin(n)}\033[m \n")
+        n=intread("Insira um valor:")
+        print(f"\nR:{dec2bin(n)}\n")
         
     #elif e==2:
     #elif e==3:
     #elif e==4:
     elif e==5:
-        n=intread(" \033[032mInsira um valor:\033[m ")
-        print(f"\n  R: \033[035m{dec2hex(n)}\033[m \n")
+        n=intread(" Insira um valor:")
+        print(f"\nR: {dec2hex(n)}\n")
     sleep(2)

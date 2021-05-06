@@ -2,7 +2,7 @@ def dec2bin(n):
     b=2
     m=[]
     while n!=0:
-      print(f"  {n}/{b}={n//b}+\033[035m{n%b}\033[m")
+      print(f"{n} / {b} = {n//b} + {n%b}")
       m.append(n%b)
       n=n//b
         

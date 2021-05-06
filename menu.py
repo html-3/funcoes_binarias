@@ -13,8 +13,8 @@ def head(t,s):
 def opcoes(p):
     c=0
     for i in p:
-        print(f" \033[033m{c} -\033[m \033[032m{i}\033[m")
+        print(f"{c} - {i}")
         c+=1
     linha(s)
-    e=intread(" \033[032mEscolha:\033[m ")
+    e=intread("Escolha:")
     return e

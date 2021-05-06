@@ -2,7 +2,7 @@ def dec2hex(n):
     b=16
     m=[]
     while n!=0:
-      print(f"  {n}/{b}={n//b}+\033[035m{n%b}\033[m")
+      print(f"{n} / {b} = {n//b} + {n%b}")
       if n%b==10:   m.append("A")
       elif n%b==11: m.append("B")
       elif n%b==12: m.append("C")

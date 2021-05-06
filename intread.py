@@ -3,7 +3,7 @@ def intread(n):
         try:
             n=int(input(n))
         except (ValueError, TypeError):
-            print('\033[031mErro: Digite um valor válido.\033[m')
+            print('Erro: Digite um valor válido.')
             continue
         else:
             return n
