@@ -28,12 +28,9 @@ def tradutor(x,n):
         }
 
     for i in x:
-        v = v+bases[i]
-    
-    for i in x:
         b.append(bases[i])
 
-    return 
+    return b
 
 # como dividir um número em uma base conhecida mas ortodoxa?
 
@@ -68,6 +65,14 @@ def transformador(x,n,m):
     # nao sei como deveria ser feito...
     if n>m:
         # x deve ser dividio por m
+        for i in c:
+            while y>m:
+                # mano to cansado vou dormir
+                # mas a ideia é a sguinte
+                # cada digito y dum numero x qualquer deve ser dividio pela nova base m
+                # no caso q o digito y seja inferior à m
+                # y vai ser multiplicado pela base m e adicionado ao próximo dígito da sequência
+                # processo é repetido 
         while c!=0:
             print(f"{c} / {m} = {c//m} + {c%m}")
             v.append(bases[n%b])
