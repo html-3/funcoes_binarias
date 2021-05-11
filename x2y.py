@@ -2,7 +2,7 @@ def tradutor(x,n):
     # torna o valor x em um valor decimal v
     # torna o valor x em uma lista b de digitos decimais
     v = 0
-    b = []
+    c = []
     bases = {
         "0":0,
         "1":1,
@@ -28,17 +28,17 @@ def tradutor(x,n):
         }
 
     for i in x:
-        b.append(bases[i])
+        c.append(bases[i])
 
-    return b
+    return c
 
 # como dividir um número em uma base conhecida mas ortodoxa?
+def retradutor():
 
 def transformador(x,n,m):
     # n é a base de x e m é a base a ser transformada
     # n, m ∈ {1,2,3...20}
-    c = x
-    v = []
+    c = tradutor(x,n)
     bases = {
         0:"0",
         1:"1",
@@ -66,13 +66,17 @@ def transformador(x,n,m):
     if n>m:
         # x deve ser dividio por m
         for i in c:
-            while y>m:
-                # mano to cansado vou dormir
-                # mas a ideia é a sguinte
-                # cada digito y dum numero x qualquer deve ser dividio pela nova base m
-                # no caso q o digito y seja inferior à m
-                # y vai ser multiplicado pela base m e adicionado ao próximo dígito da sequência
-                # processo é repetido 
+            # mano to cansado vou dormir
+            # mas a ideia é a sguinte
+            # cada digito y dum numero x qualquer deve ser dividio pela nova base m
+            # no caso q o digito y seja inferior à m
+            # y vai ser multiplicado pela base m e adicionado ao próximo dígito da sequência
+            # processo é repetido
+            c[i] = c[i] // m 
+            print(f"{c[i]} / {m} = {c[i]//m} + {c[i]%m}")
+            c[i+1] = c[i+1] + c[i]%m*m
+            # cara isso é bem complicado mesmo
+            
         while c!=0:
             print(f"{c} / {m} = {c//m} + {c%m}")
             v.append(bases[n%b])
